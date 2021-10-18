@@ -1,9 +1,8 @@
 function akanName() {
-
     let yearOfBirth = document.getElementById("yearInput").value;
-    let monthOfBirth = document.getElementById("monthInput").value;
-    let dayOfBirth = document.getElementById("dayInput").value;
-    let gender = document.getElementById("gender").value;
+    let monthOfBirth = Number(document.getElementById("monthInput").value);
+    let dayOfBirth = Number(document.getElementById("dayInput").value);
+    let genders = document.getElementById("gender").value;
 
     function clickgender() {
         if (gender.checked) {
@@ -15,6 +14,7 @@ function akanName() {
     console.log(genderValue);
 
     //day and month validator
+
     function dayValidation() {
         if (dayOfBirth <= 0 || dayOfBirth > 31) {
             return false;
@@ -23,6 +23,11 @@ function akanName() {
         }
     }
 
+    //validation variables
+    let monthValid = monthValidation();
+    let dayValid = dayValidation();
+
+
     function monthValidation() {
         if (monthOfBirth <= 0 || monthOfBirth > 12) {
             return false
@@ -30,19 +35,43 @@ function akanName() {
             return true;
         }
     }
-}
 
-//formula to generate Day of the week.
-let Dayoftheweek = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
 
-//Creating arrays for males,females and Day of the week.
-let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    //formula to generate Day of the week.
+    let Dayoftheweek = Math.floor((((Number(yearOfBirth.slice(0, 2)) / 4) - 2 * Number(yearOfBirth.slice(0, 2)) - 1) +
+        ((5 * Number(yearOfBirth.slice(2, 4)) / 4)) + ((26 * (monthOfBirth + 1) / 10)) + dayOfBirth) % 7);
 
-let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "kwame"];
+    //Creating arrays for males,females and Day of the week.
+    let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "kwame"];
 
-//getting index value on arrays
-if (genderValue == = "male" && Dayoftheweek = = = 0) {
-    document.getElementById('result').textContent = your Akan name is " + akanName[0];
+    let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+    //generating and index value to select items on arrays
+    let index;
+    // fix formula bug
+    if (dayOfWeekNumber == 0) {
+        index = 6;
+    } else {
+        index = dayOfWeekNumber - 1;
+    }
+
+    console.log(index);
+
+    if (genderValue == "male" && monthValid && dayValid) {
+        document.getElementById('result').textContent = "You were born on a " + dayOfWeek[index] + " , your Akan name is " + male[index];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        document.getElementById('result').style.fontSize = "18px";
+        document.querySelector('h1').textContent = "Hello" + " " + male[index];
+        return false;
+    } else if (genderValue == "female" && monthValid && dayValid) {
+        document.getElementById('result').textContent = "You were born on a " + dayOfWeek[index] + " , your Akan name is " + female[index];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        document.getElementById('result').style.fontSize = "18px";
+        document.querySelector('h1').textContent = "Hello" + " " + female[index];
+        return false;
+    } else {
+        alert("You entered an invalid day or month, please try again");
+    }
 }

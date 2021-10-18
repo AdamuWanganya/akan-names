@@ -15,8 +15,22 @@
 <body>
     <div class="container">
         <h1>Akan Names!</h1>
+        <p>This is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Names.</p>
+        <h6>The Following application should display names according to Day:</h6>
+        <ol>
+            <p>Male</p>
+            <li>Sunday: Kwasi</li>
+            <li>Monday: Kwadwo</li>
+            <li>Tuesday: Kwabena</li>
+            <li>Wednesday: Yaw</li>
+            <li>Thursday: Yaw</li>
+            <li>Friday: kofi</li>
+            <li>Saturday: Kwame</li>
+        </ol>
+
+        </ol>
         <div class="card">
-            <div class="card-title">This is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Names.</div>
+            <div class="card-title"></div>
             <p>To use this application Enter your birthday then click on your gender and it display your day and birthday name;</p>
             <br>
             <form class="form" onsubmit="return akanName()">
@@ -31,7 +45,6 @@
                 <label for="year-of-birth">
                      <input type="type" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
                 </label>
-
                 <br> <br>
                 <label for="gender">
                 <p>Select your Gender:</p>
@@ -41,9 +54,9 @@
                  <input id="female-input" type="radio" name="gender" value="female" required>
                 </label>
                 <!--<input type="text" id="gender" placeholder="Male/Female" max="6">-->
-                <br>
-
-                <input type=" submit " value="Check name " id="submit ">
+                <br><br>
+                <input id="get-name" type="submit" onclick="akanName()" value="Generate name ">
+                <br><br>
             </form>
 
             <h4 id=display-name><strong>Your Akan name is:</strong></h4>
