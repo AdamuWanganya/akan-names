@@ -23,6 +23,13 @@ function akanName() {
         }
     }
 
+    function monthValidation() {
+        if (monthOfBirth <= 0 || monthOfBirth > 12) {
+            return false
+        } else {
+            return true;
+        }
+    }
 }
 
 //formula to generate Day of the week.
