@@ -21,18 +21,18 @@
             <br>
             <form class="form" onsubmit="return akanName()">
                 <label for="year-of-birth">Year of Birth:
-                    Day:
+                    
                 <label for="day-of-birth">
-                    <input type="number" id="dayInput" name="day-of-birth" placeholder="DD" value="" required>
-                </label> Month:
+                    <input type="number" id="dayInput" name="day-of-birth" placeholder="DD"min="1" max="31" value="" required>
+                </label>
                 <label for="month-of-birth">
                     <input type="number" id="monthInput" name="month-of-birth" placeholder="MM" value="" required>
-                 </label> Year:
-                <input type="number" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
+                 </label>
+                <label for="year-of-birth">
+                     <input type="number" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
                 </label>
 
-
-                <br>
+                <br> <br>
                 <label for="gender">
                     <p>Select your Gender:</p>
                     Male:
@@ -41,6 +41,7 @@
                     <input id="femaleInput" type="radio" name="gender" value="female" required>
                 </label>
                 <br><br>
+
                 <input type="submit" value="Check name" id="submit">
             </form>
             <form onsubmit="return clearInput()">
