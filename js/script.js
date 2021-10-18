@@ -12,3 +12,6 @@ function clickgender(male, female) {
 
 let genderValue = clickgender();
 console.log(genderValue);
+
+//formula to generate Day of the week.
+let Dayoftheweek = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
