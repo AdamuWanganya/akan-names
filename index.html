@@ -26,30 +26,31 @@
                     <input type="number" id="dayInput" name="day-of-birth" placeholder="DD"min="1" max="31" value="" required>
                 </label>
                 <label for="month-of-birth">
-                    <input type="number" id="monthInput" name="month-of-birth" placeholder="MM" value="" required>
+                    <input type="number" id="monthInput" name="month-of-birth" placeholder="MM" min="1" max="12" value="" required>
                  </label>
                 <label for="year-of-birth">
-                     <input type="number" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
+                     <input type="type" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
                 </label>
 
                 <br> <br>
                 <label for="gender">
-                    <p>Select your Gender:</p>
-                    Male:
-                    <input id="maleInput" type="radio" name="gender" value="male" required>
-                    Female
-                    <input id="femaleInput" type="radio" name="gender" value="female" required>
+                <p>Select your Gender:</p>
+                Male
+                <input id="male-input" type="radio" name="gender" value="male" required>
+                 Female
+                 <input id="female-input" type="radio" name="gender" value="female" required>
                 </label>
-                <br><br>
+                <!--<input type="text" id="gender" placeholder="Male/Female" max="6">-->
+                <br>
 
-                <input type="submit" value="Check name" id="submit">
+                <input type=" submit " value="Check name " id="submit ">
             </form>
-            <form onsubmit="return clearInput()">
-                <input type="submit" value="Clear" id="claer">
-            </form>
+
+            <h4 id=display-name><strong>Your Akan name is:</strong></h4>
+            <p id="result "></p>
         </div>
     </div>
-    <script src="js/script.js">
+    <script src="js/script.js ">
     </script>
 </body>
 
