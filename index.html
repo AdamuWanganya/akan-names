@@ -20,12 +20,17 @@
             <p>To use this application Enter your birthday then click on your gender and it display your day and birthday name;</p>
             <br>
             <form class="form" onsubmit="return akanName()">
-
                 <label for="yearOfBirthday">Year of Birth:
-                <input type="number" id="yearInput" placeholder="yyyy" value="" required>
+                    Month:
+                <label for="monthOfBirth">
+                    <input type="number" id="monthInput" name="month-of-birth" placeholder="MM" value="" required>
+                 </label>
+
+
+                <input type="number" id="yearInput" name="year-of-birth" placeholder="yyyy" value="" required>
                 </label>
 
-                <br>
+
                 <br>
                 <label for="gender">
                     <p>Select your Gender:</p>
