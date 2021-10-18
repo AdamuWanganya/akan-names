@@ -1,7 +1,7 @@
 function akanName() {
     let yearOfBirth = document.getElementById("yearInput").value;
     let monthOfBirth = document.getElementById("monthInput").value;
-
+    let dayOfBirth = document.getElementById("dayInput").value;
     let gender = document.getElementById("gender");
 
 }
