@@ -9,3 +9,6 @@ function clickgender(male, female) {
         return gender.value;
     }
 }
+
+let genderValue = clickgender();
+console.log(genderValue);
