@@ -4,7 +4,7 @@ a.addEventListener("click", function() { //added an onclick event listener to bt
     var dayOfBirth = DOB.getDay(); //variable "dayOfBirth" returns an integer value for the day of the week
     //0 is Sunday and Saturday 6.
     function myFunction() {
-        document.getElementById("form").reset();
+        document.getElementById("btnClick").reset();
     }
     var radioselect = document.querySelector('input[name="gender"]:checked').value; //var "radioselect" gets the choice selected from the radio buttons
     if (radioselect == "male" && dayOfBirth == 0) {
