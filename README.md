@@ -4,6 +4,8 @@ This is my personal portfolio project,use by user to display their birthday name
 ## Description
 his is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Names.
 
+## Screenshot
+![Portfolio](images/akan.png?raw=true "Optional Title")
 
 ## Setup Instructions
 $git clone https://github.com/AdamuWanganya/portfolio-landing-page on your terminal.
