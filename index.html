@@ -46,40 +46,40 @@
         <p>To use this application Enter your birthday then click on your gender and it display your day and birthday name;</p>
         <br>
         <form id="form" action="javascript:void(0)">
-            <label for="date-of-birth">Date of Birth: </label>
-            <label for="dayInput">
-        <input type="number" id="dayInput" name="day-of-birth" placeholder="DD" min="1" max="31" required>
-        </label>
-
-            <label for="monthInput">
-        <input type="number" id="monthInput" name="month-of-birth" placeholder="MM" min="1" max="12"  required>
-        </label>
-
-            <label for="yearInput">
-        <input type="text" pattern="\d*" maxlength="4" id="yearInput" name="year-of-birth" placeholder="yyyy"  required>
-        </label>
-            <br>
-            <br>
-
-            <label for="gender"> 
-        <p>Select your Gender: </p> 
-        Male
-        <input id="male-input" type="radio" name="gender" value="male" required>
-        Female 
-        <input id="female-input" type="radio" name="gender" value="female" required>
-        </label>
-            <br>
-            <br>
-            <input id="get-name" type="submit" onclick="akanName()" value="Generate name ">
-            <br>
-            <br>
-            <input type="button" onclick="myFunction()" value="Reset">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <div class="fst">
+                            <h1>Akan Name.</h1>
+                            <p class="fstp">This application checks whether the day and month entered is valid. The applicatin will then output their Akan name depending on their gender.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dateSec">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="info" name="information">
+                            Birthday:
+                            <input type="date" name="bday" id="dateOB">
+                            <fieldset class="set">
+                                <legend>Gender:</legend>
+                                <label>
+                                    <input type="radio" value="male" name="gender">male<br>
+                                </label>
+                                <label>
+                                    <input type="radio" value="female" name="gender">female
+                                </label>
+                            </fieldset>
+                        </form>
+                        <button class="btn" id="btnClick">Click</button>
+                        <p class="result" id="resultSection">Name Here</p>
+                        <input type="button" onclick="myFunction()" value="Reset">
+                    </div>
+                </div>
+            </div>
         </form>
-    </div>
-    <h4><span id="akan-name"></span></h4>
-    <p id="result"></p>
-    </div>
-    <script src="js/script.js "></script>
+        <script src="js/script.js "></script>
 </body>
 
 </html>
